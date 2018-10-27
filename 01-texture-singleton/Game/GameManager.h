@@ -5,6 +5,7 @@
 #include <memory>
 #include <SFML/Graphics.hpp>
 #include "FrameTimeController.h"
+#include "SpriteManager.h"
 
 class GameManager
 {
@@ -12,6 +13,7 @@ private:
   sf::RenderWindow window;
   sf::Time elapsedTime;
   FrameTimeController frameTimeController;
+  SpriteManager spriteMan;
 
 public:
   GameManager();

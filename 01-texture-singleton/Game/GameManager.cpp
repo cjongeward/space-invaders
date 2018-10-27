@@ -39,5 +39,6 @@ void GameManager::draw()
   this->window.clear();
   this->window.draw(Debugger::getInstance().getStats().getDrawable());
   this->window.draw(Debugger::getInstance().getMessages().getDrawable());
+  this->window.draw(spriteMan.get(SpriteID::ALIEN1));
   this->window.display();
 }

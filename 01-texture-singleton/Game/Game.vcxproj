@@ -126,14 +126,18 @@
     <ClInclude Include="FrameTimeController.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="SpriteManager.h" />
     <ClInclude Include="TextObject.h" />
+    <ClInclude Include="TextureManager.h" />
     <ClInclude Include="TimeManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Debugger.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SpriteManager.cpp" />
     <ClCompile Include="TextObject.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="TimeManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
