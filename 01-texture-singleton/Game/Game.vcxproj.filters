@@ -13,7 +13,7 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Sprite">
+    <Filter Include="Source Files\Managers">
       <UniqueIdentifier>{164d32df-cf3e-4065-84e0-45c55f19bcc9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -21,13 +21,7 @@
     <ClInclude Include="CommandAction.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="Debugger.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="FrameTimeController.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameManager.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="GameObject.h">
@@ -36,40 +30,49 @@
     <ClInclude Include="TextObject.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="TimeManager.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="SpriteManager.h">
-      <Filter>Source Files\Sprite</Filter>
+      <Filter>Source Files\Managers</Filter>
     </ClInclude>
     <ClInclude Include="TextureManager.h">
-      <Filter>Source Files\Sprite</Filter>
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>Source Files\Managers</Filter>
     </ClInclude>
     <ClInclude Include="InstanceManager.h">
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Debugger.h">
+      <Filter>Source Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Debugger.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TextObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TimeManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SpriteManager.cpp">
-      <Filter>Source Files\Sprite</Filter>
+      <Filter>Source Files\Managers</Filter>
     </ClCompile>
     <ClCompile Include="TextureManager.cpp">
-      <Filter>Source Files\Sprite</Filter>
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Debugger.cpp">
+      <Filter>Source Files\Managers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

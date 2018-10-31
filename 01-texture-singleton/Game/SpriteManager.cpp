@@ -14,7 +14,7 @@ SpriteManager::~SpriteManager()
 {
 }
 
-const sf::Sprite& SpriteManager::get(SpriteID id)
+sf::Sprite& SpriteManager::get(SpriteID id)
 {
   return this->spriteMap[id];
 }

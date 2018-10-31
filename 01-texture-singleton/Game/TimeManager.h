@@ -7,17 +7,13 @@
 #include <functional>
 #include "CommandAction.hpp"
 
-class TimeManager
-{
+class TimeManager {
+  friend class InstanceManager;
 private:
   sf::Time currentTime;
   std::priority_queue< CommandAction, std::vector<CommandAction>, std::greater<CommandAction>> commandQueue;
 
 public:
-  static TimeManager& getInstance() {
-    static TimeManager instance;
-    return instance;
-  }
   const sf::Time& getCurrentTime() const {
     return this->currentTime;
   }

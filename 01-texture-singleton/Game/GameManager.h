@@ -11,7 +11,6 @@ class GameManager {
   friend class InstanceManager;
 private:
   sf::RenderWindow window;
-  sf::Time elapsedTime;
   FrameTimeController frameTimeController;
   SpriteManager spriteMan;
   GameManager();

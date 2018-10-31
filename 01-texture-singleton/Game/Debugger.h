@@ -7,8 +7,8 @@
 #include <SFML/System.hpp>
 #include "TextObject.h"
 
-class Debugger
-{
+class Debugger {
+  friend class InstanceManager;
 private:
   sf::Time frameTime;
   sf::Time peakFrameTime;
@@ -20,10 +20,6 @@ private:
 
 
 public:
-  static Debugger& getInstance() {
-    static Debugger instance;
-    return instance;
-  }
   const GameObject& getMessages() const {
     return this->debugText;
   }

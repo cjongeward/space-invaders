@@ -1,5 +1,5 @@
 #include "Debugger.h"
-#include "TimeManager.h"
+#include "InstanceManager.h"
 
 Debugger::Debugger()
 {
@@ -14,9 +14,9 @@ Debugger::Debugger()
   }
   this->command = [&]() {
     updateStats();
-    TimeManager::getInstance().addCommand(TimeManager::getInstance().getCurrentTime() + sf::seconds(1), command);
+    InstanceManager::TimeManagerInst().addCommand(InstanceManager::TimeManagerInst().getCurrentTime() + sf::seconds(1), command);
   };
-  TimeManager::getInstance().addCommand(TimeManager::getInstance().getCurrentTime(), command);
+  InstanceManager::TimeManagerInst().addCommand(InstanceManager::TimeManagerInst().getCurrentTime(), command);
 }
 
 void Debugger::updateDebugText()
@@ -57,7 +57,7 @@ void Debugger::updateStats()
 void Debugger::message(const std::string & str)
 {
   this->msgList.push_back(str);
-  TimeManager::getInstance().addCommand(TimeManager::getInstance().getCurrentTime() + sf::seconds(5), [&]() {
+  InstanceManager::TimeManagerInst().addCommand(InstanceManager::TimeManagerInst().getCurrentTime() + sf::seconds(5), [&]() {
     msgList.pop_front();
     updateDebugText();
   });

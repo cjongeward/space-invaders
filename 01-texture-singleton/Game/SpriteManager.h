@@ -18,7 +18,7 @@ public:
   SpriteManager();
   ~SpriteManager();
 
-  const sf::Sprite& get(SpriteID id);
+  sf::Sprite& get(SpriteID id);
 
   SpriteManager(const SpriteManager& rhs) = delete;
   SpriteManager& operator=(const SpriteManager& rhs) = delete;

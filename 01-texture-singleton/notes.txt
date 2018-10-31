@@ -1,5 +1,9 @@
 Singleton Pattern
 
+Modern C++ design - alexandrescu
+GOF book
+
+
 - thread safety
   * null check is not thread safe
 
@@ -14,6 +18,7 @@ Singleton Pattern
     * If the singleton has initialization code that depends on something called by main, we have a problem
         *** yup.  There is initialization code in SFML that is getting in the way
   * gives you the choice between lazy or startup initialization
+  * lazy init doesn't work well when singletons are called from other singletons
 
 - How about a singleton manager
   * manages a singleton and is a friend of the singleton
