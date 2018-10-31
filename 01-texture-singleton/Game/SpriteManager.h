@@ -3,7 +3,6 @@
 
 #include <map>
 #include <SFML/Graphics.hpp>
-#include "TextureManager.h"
 
 enum class SpriteID
 {
@@ -13,7 +12,6 @@ enum class SpriteID
 
 class SpriteManager {
 private:
-  TextureManager texMan;
   std::map<SpriteID, sf::Sprite> spriteMap;
 
 public:

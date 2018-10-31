@@ -1,8 +1,9 @@
 #include "GameManager.h"
+#include "InstanceManager.h"
 
 int main()
 {
-  GameManager gameManager;
+  GameManager& gameManager = InstanceManager::GameManagerInst();
 
   while (gameManager.getWindow().isOpen())
   {

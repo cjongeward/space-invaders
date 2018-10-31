@@ -2,13 +2,12 @@
 
 TextureManager::TextureManager()
 {
-  sf::Texture tex;
-  tex.loadFromFile("space.tga");
-  this->textureMap[TextureID::SPACE_INVADERS_SPRITE_SHEET] = std::move(tex);
+  loadTextures();
 }
 
-TextureManager::~TextureManager()
+void TextureManager::loadTextures()
 {
+  this->textureMap[TextureID::SPACE_INVADERS_SPRITE_SHEET].loadFromFile("space.tga");
 }
 
 const sf::Texture& TextureManager::get(TextureID id)

@@ -1,0 +1,25 @@
+Singleton Pattern
+
+- thread safety
+  * null check is not thread safe
+
+- performance
+  * null check is unneccessary all but the first time
+
+- Lazy initialization
+  * static instantiation with the getInstance method initializes the singleton the first time it is called.  Lives for the duration of the program.
+    * Is it thread safe?  Does it require syncronization?
+  * static instantiation as a static member variable initializes the singleton before main.  Lives for the duration of the program.
+    * Is it still thread safe?
+    * If the singleton has initialization code that depends on something called by main, we have a problem
+        *** yup.  There is initialization code in SFML that is getting in the way
+  * gives you the choice between lazy or startup initialization
+
+- How about a singleton manager
+  * manages a singleton and is a friend of the singleton
+    * promotes SRP by seperating singleton functionality from singleton management
+
+- How about a master singleton manager
+  * manages all singletons
+  * could solve the order of initialization problem
+  * are static members initialized in order?

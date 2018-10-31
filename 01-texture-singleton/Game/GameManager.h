@@ -7,16 +7,16 @@
 #include "FrameTimeController.h"
 #include "SpriteManager.h"
 
-class GameManager
-{
+class GameManager {
+  friend class InstanceManager;
 private:
   sf::RenderWindow window;
   sf::Time elapsedTime;
   FrameTimeController frameTimeController;
   SpriteManager spriteMan;
+  GameManager();
 
 public:
-  GameManager();
   const sf::RenderWindow& getWindow() const {
       return this->window;
   }
@@ -29,5 +29,6 @@ public:
   GameManager(const GameManager& rhs) = delete;
   GameManager& operator=(const GameManager& rhs) = delete;
 };
+
 
 #endif
